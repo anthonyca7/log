@@ -1,0 +1,363 @@
+
+<html>
+<head>
+    <title>LOG | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+    <link href="css/my-styles.css" rel="stylesheet" media="screen">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+<body>
+
+  <!-- Navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        
+        
+        <a class="main-logo pull-left" href="#">LOG</a>
+        <div class="collapse navbar-collapse">
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">home</a></li>
+            <li><a data-toggle="modal" href="#signInModal">sign in</a></li>
+            <li><a data-toggle="modal" href="#textModal" >sign up</a></li>
+            <li><a href="#">games</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <!-- End navbar -->
+
+<!-- Carousel -->
+<div class="row">
+    <div id="myCarousel" class="carousel slide visible-xs">
+      <div class="container-fluid">
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="img/battle-field-carousel.png"> 
+          </div>
+          <div class="item">
+            <img src="img/wwe-carousel.png"> 
+          </div>
+          <div class="item">
+            <img src="img/madden-25-carousel.png">       </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+      </a>
+    </div>
+    </div>
+    <!-- End carousel -->
+
+
+
+ <!-- Coverflow --> 
+<div class="row">
+<div class="cover-flow-div">
+<div class="container">
+<div class="main-coverflow-container row hidden-xs">
+  <div class="coverflow-container">
+    <ol class="coverflow-list">
+      <!-- Cover item -->
+      <input type="radio" name="cover-item" id="cover-1">
+      <li class="coverflow-item">
+        <label class="coverFlowLabel" for="cover-1">
+          <figure class="game-cover">
+            <img src="img/nba2k15.png">
+            <figcaption class="game-name">NBA2K15</figcaption>
+          </figure>
+        </label>
+      </li>
+      <!-- Cover item -->
+      <input type="radio" name="cover-item" id="cover-2">
+      <li class="coverflow-item">
+        <label class="coverFlowLabel" for="cover-2">
+          <figure class="game-cover">
+            <img  src="img/madden.png" />
+            <figcaption class="game-name">MADDEN 25</figcaption>
+          </figure>
+        </label>
+      </li>
+      <!-- Cover item -->
+      <input type="radio" name="cover-item" id="cover-3">
+      <li class="coverflow-item">
+        <label  class="coverFlowLabel" for="cover-3">
+          <figure class="game-cover">
+            <img  src="img/need-for-speed.png">
+            <figcaption class="game-name">NEED FOR SPEED</figcaption>
+          </figure>
+        </label>
+      </li>
+      <!-- Cover item -->
+      <input type="radio" name="cover-item" id="cover-4">
+      <li class="coverflow-item">
+        <label class="coverFlowLabel" for="cover-4">
+          <figure class="game-cover">
+            <img  src="img/rainbow-six.png">
+            <figcaption class="game-name">RAINBOW SIX</figcaption>
+          </figure>
+        </label>
+      </li>
+      <!-- Cover item -->
+      <input type="radio" name="cover-item" id="cover-5">
+      <li class="coverflow-item">
+        <label class="coverFlowLabel" for="cover-5">
+          <figure class="game-cover">
+            <img  src="img/wwe.png">
+            <figcaption class="game-name">WWE</figcaption>
+          </figure>
+        </label>
+      </li>
+      <!-- Cover item -->
+      <input type="radio" name="cover-item" id="cover-6">
+      <li class="coverflow-item">
+        <label class="coverFlowLabel" for="cover-6">
+          <figure class="game-cover">
+            <img  src="img/halo.png">
+            <figcaption class="game-name">HALO</figcaption>
+          </figure>
+        </label>
+      </li>
+      <!-- Cover item -->
+      <input type="radio" name="cover-item" id="cover-7">
+      <li class="coverflow-item">
+        <label class="coverFlowLabel" for="cover-7">
+          <figure class="game-cover">
+            <img  src="img/call-of-duty.png">
+            <figcaption class="game-name">CALL OF DUTY</figcaption>
+          </figure>
+        </label>
+      </li>
+      <!-- Cover item -->
+      <input type="radio" name="cover-item" id="cover-8">
+      <li class="coverflow-item">
+        <label class="coverFlowLabel" for="cover-8">
+          <figure class="game-cover">
+            <img src="img/spliter-game.png" >
+            <figcaption class="game-name">SPLITER CELL</figcaption>
+          </figure>
+        </label>
+      </li>
+      <!-- Cover item -->
+      <input type="radio" name="cover-item" id="cover-9">
+      <li class="coverflow-item">
+        <label class="coverFlowLabel" for="cover-9">
+          <figure class="game-cover">
+            <img src="img/battle-field.png" >
+            <figcaption class="game-name">BATTLE FIELD</figcaption>
+          </figure>
+        </label>
+      </li>
+    </ol>
+  </div>
+  <div class="controls hidden">
+      <label class="coverFlowLabel" for="cover-1">1</label>
+      <label class="coverFlowLabel" for="cover-2">2</label>
+      <label class="coverFlowLabel" for="cover-3">3</label>
+      <label class="coverFlowLabel" for="cover-4">4</label>
+      <label class="coverFlowLabel" for="cover-5">5</label>
+      <label class="coverFlowLabel" for="cover-6">6</label>
+      <label class="coverFlowLabel" for="cover-7">7</label>
+      <label class="coverFlowLabel" for="cover-8">8</label>
+      <label class="coverFlowLabel" for="cover-9">9</label>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+ <!-- End Coverflow --> 
+
+ <hr>
+
+
+<!-- Modal Sign Up-->
+ <div class="modal fade" id="textModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+        </button>
+        <h4>Sign up today to join</h4>
+        <div class="modal-body">
+
+          <form role="form-horizontal">
+            <div class="form-group">
+              <label class="emailLabel" for="exampleInputEmail">Email Address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+            </div>
+            <p>Select your birthday</p>
+            <div class="row">
+            <div class="col-xs-3">
+              <select class="form-control">
+                <option>1984</option>
+                <option>1983</option>
+                <option>1982</option>
+                <option>1981</option>
+                <option>1980</option>
+                <option>1979</option>
+              </select>
+              </div>
+            <div class="col-xs-3">
+              <select class="form-control">
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+              </select>
+              </div>
+              <div class="col-xs-3">
+              <select class="form-control">
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+              </select>
+              </div>
+              <div class="form-group">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-default">Sign up</button>
+              </div>
+            </div>
+              </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+ <!-- End Modal -->
+
+ <!-- Modal Sign In-->
+ <div class="modal fade" id="signInModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+        </button>
+        <h4>Sign In</h4>
+        <div class="modal-body">
+
+          <form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-default">Sign in</button>
+    </div>
+  </div>
+</form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+ <!-- End Modal -->
+
+ <!-- Main Content -->
+<div class="container"> 
+  <a class="btnFeature btn btn-primary btn-lg" href="#">enter to play</a>
+</div>
+
+
+<div class="container home-container">
+
+<div class="row">
+<div class="col-sm-4">  
+      
+      <b class="glyphicon glyphicon-user"></b>
+      <h2 class="hp-header">User</h2>
+      <p class="hp-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mi augue, tempor et mollis at, volutpat eu mauris. Nunc eget mollis quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mi augue, tempor et mollis at, volutpat eu mauris. Nunc eget mollis quam. </p>
+</div>
+
+<div class="col-sm-4">   
+       
+        <b class="glyphicon glyphicon-off"></b>
+        <h2 class="hp-header">Power On</h2>
+        <p class="hp-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mi augue, tempor et mollis at, volutpat eu mauris. Nunc eget mollis quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mi augue, tempor et mollis at, volutpat eu mauris. Nunc eget mollis quam. </p>
+      
+  </div>
+
+<div class="col-sm-4">
+        
+           <b class="glyphicon glyphicon-usd"></b> 
+           <h2 class="hp-header">Prizes</h2>
+           <p class="hp-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mi augue, tempor et mollis at, volutpat eu mauris. Nunc eget mollis quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mi augue, tempor et mollis at, volutpat eu mauris. Nunc eget mollis quam. </p>
+         
+  </div>
+</div> 
+</div><!-- End Main Content -->
+
+  <!-- Footer --> 
+
+  
+<div class="row main-footer">
+<div class="col-sm-12">
+    <div class="container">
+      <ul class="footer-link-list">
+        <li><a href="#">about log</a></li>
+        <li><a href="#">contact us</a></li>
+        <li><a href="#">fqa</a></li>
+      </ul>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2014 LOG - By <a href="halecaesar.com">HALECAESAR</a></p>
+    </div>
+    </div>
+  </div>
+<!-- End Footer -->
+ 
+
+  <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
