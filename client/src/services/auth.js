@@ -12,12 +12,13 @@ angular.module('fullstack')
     $rootScope.currentUser = $cookieStore.get('user') || null;
     $cookieStore.remove('user');
     return {
-      login: function(user, callback) {
+      login: function(user, remember, callback) {
         var cb = callback || angular.noop;
 
         return Session.save({
           email: user.email,
-          password: user.password
+          password: user.password,
+          remember: remember
         }, function(user) {
           $rootScope.currentUser = user;
           return cb();

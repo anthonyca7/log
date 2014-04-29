@@ -13,6 +13,9 @@ angular.module('fullstack', [
 			.when('/',{
 				templateUrl: 'partials/main'
 			})
+			.when('/profile',{
+				templateUrl: 'partials/profile'
+			})
 			// .when('/signup',{
 			// 	templateUrl: 'partials/signup',
 			// 	controller: 'SignupController'

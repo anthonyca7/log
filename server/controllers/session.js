@@ -13,7 +13,12 @@ exports.login = function (req, res, next) {
     if (error) { return res.json(401, error); }
 
     req.logIn(user, function(err) {
-      
+      if(req.body.remember === true) {
+        req.session.cookie.maxAge = 365*24*60*60*1000;
+      }
+      else{
+        req.session.cookie.maxAge = 0;
+      }
       if (err) { return res.send(err); }
       res.json(req.user.userInfo);
     });

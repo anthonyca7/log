@@ -32,7 +32,7 @@ passport.use(new LocalStrategy({
       
       if (!user) {
         return done(null, false, {
-          message: 'This username is not registered.'
+          message: 'This email is not registered.'
         });
       }
       if (!user.authenticate(password)) {

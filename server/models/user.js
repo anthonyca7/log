@@ -8,15 +8,11 @@ var mongoose = require('mongoose'),
  * User Schema
  */
 var UserSchema = new Schema({
-  name: String,
-  username: {
-    type: String,
-    match: /^[a-zA-Z][a-zA-Z0-9\-\_]+$/,
-  },
   email: {
     type: String,
     match: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
   },
+  dob: Date,
   hashedPassword: String,
   salt: String
 });
@@ -41,8 +37,8 @@ UserSchema
   .get(function() {
     return {
       '_id': this._id,
-      'username': this.username,
-      'name': this.name,
+      'email': this.email,
+      'dob': this.dob
     };
   });
 
@@ -51,8 +47,9 @@ UserSchema
   .virtual('profile')
   .get(function() {
     return {
-      'name': this.name,
-      'username': this.username,
+      '_id': this._id,
+      'email': this.email,
+      'dob': this.dob
     };
   });
     
@@ -62,13 +59,6 @@ UserSchema
   .validate(function(email) {
     return email.length >= 8 && email.length <= 50;
   }, 'Email cannot be blank');
-
-// Validate empty username
-UserSchema
-  .path('username')
-  .validate(function(username) {
-    return username.length >= 5 && username.length <= 25;
-  }, 'Username cannot be blank');
 
 // Validate empty password
 UserSchema
@@ -92,20 +82,6 @@ UserSchema
     });
 }, 'The specified email address is already in use.');
 
-// Validate username is not taken
-UserSchema
-  .path('username')
-  .validate(function(value, respond) {
-    var self = this;
-    this.constructor.findOne({username: value}, function(err, user) {
-      if(err) {throw err;}
-      if(user) {
-        if(self.id === user.id) {return respond(true);}
-        return respond(false);
-      }
-      return respond(true);
-    });
-}, 'The specified username is already in use.');
 
 var validatePresenceOf = function(value) {
   return value && value.length;
@@ -134,9 +110,7 @@ UserSchema.methods = {
   },
 
   makeSalt: function() {
-    return ((new Buffer('Anthony\'s salt Asdfg', 'base64'))   +
-            crypto.randomBytes(16).toString('base64') +
-            (new Buffer('Anthony\'s salt Hjkl1', 'base64')));
+    return crypto.randomBytes(16).toString('base64');
   },
 
   encryptPassword: function(password) {

@@ -2,8 +2,9 @@
 
 angular.module('fullstack')
   .controller('LoginController', function ($scope, Auth, $location) {
-    $scope.user = {};
-    $scope.errors = {};
+    $scope.user     = {};
+    $scope.errors   = {};
+    $scope.remember = true;
 
     $scope.login = function(form) {
       $scope.submitted = true;
@@ -12,14 +13,16 @@ angular.module('fullstack')
         Auth.login({
           email: $scope.user.email,
           password: $scope.user.password
-        })
+        }, $scope.remember)
         .then( function() {
           $scope.closeModal();
           $location.path('/');
         })
         .catch( function(err) {
-          err = err.data;
-          $scope.errors.other = err.message;
+          // Update validity of form fields that match the mongoose errors
+          form['email'].$setValidity('mongoose', false);
+          $scope.errors['email'] = err.data.message;
+
         });
       }
     };

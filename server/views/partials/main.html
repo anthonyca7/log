@@ -199,34 +199,13 @@
             <p>Select your birthday</p>
             <div class="row">
             <div class="col-xs-3">
-              <select class="form-control">
-                <option>1984</option>
-                <option>1983</option>
-                <option>1982</option>
-                <option>1981</option>
-                <option>1980</option>
-                <option>1979</option>
-              </select>
+              <input type="text" name="year" class="form-control" ng-model="user.year" id="exampleInputyear" placeholder="year">
               </div>
             <div class="col-xs-3">
-              <select class="form-control">
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-                <option>05</option>
-                <option>06</option>
-              </select>
+              <input type="text" name="month" class="form-control" ng-model="user.month" id="exampleInputmonth" placeholder="month">
               </div>
               <div class="col-xs-3">
-              <select class="form-control">
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-                <option>05</option>
-                <option>06</option>
-              </select>
+              <input type="text" name="day" class="form-control" ng-model="user.day" id="exampleInputday" placeholder="day">
               </div>
             </div>
             <button type="submit" class="btn btn-primary">Sign up</button>
@@ -252,12 +231,23 @@
         <div class="modal-body">
           <form class="form-horizontal" role="form" name="form" ng-submit="login(form)" novalidate>
 
-            <div class="text-danger">{{errors.other}}</div>
+
+            <p class="text-danger" ng-show="form.email.$error.mongoose">
+              {{ errors.email }}
+            </p>
+
+            <p class="help-block" ng-show="form.email.$error.email && submitted">
+              Doesn't look like a valid email.
+            </p>
+            <p class="help-block" ng-show="form.email.$error.required && submitted">
+              What's your email address?
+            </p>
+
 
             <div class="form-group">
               <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
               <div class="col-sm-10">
-                <input type="email" class="form-control" name="email" id="inputEmail3" placeholder="Email" ng-model="user.email">
+                <input type="email" class="form-control" name="email" id="inputEmail3" placeholder="Email" ng-model="user.email" required mongoose-error>
               </div>
             </div>
 
@@ -272,7 +262,7 @@
               <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
                   <label>Remember me </label>
-                  <input type="checkbox">
+                  <input type="checkbox" ng-model="remember">
                 </div>
               </div>
             </div>
@@ -291,8 +281,6 @@
 
  <!-- End Modal -->
 
-
-{{currentUser| json}}
  <!-- Main Content -->
 
 <div class="container"> 

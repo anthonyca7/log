@@ -11,10 +11,9 @@ angular.module('fullstack')
 
       if(form.$valid) {
         Auth.createUser({
-          name:     $scope.user.name,
           email:    $scope.user.email,
           password: $scope.user.password,
-          username: $scope.user.username
+          dob:      new Date($scope.user.year, $scope.user.month - 1, $scope.user.day)
         })
         .then( function() {
           $scope.closeModal();
